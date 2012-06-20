@@ -96,32 +96,31 @@ snippet docx
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 snippet html
-	<html>
-	${1}
-	</html>
+<html>
+  ${1}
+</html>
 snippet xhtml
 	<html xmlns="http://www.w3.org/1999/xhtml">
 	${1}
 	</html>
 snippet body
-	<body>
-		${1}
-	</body>
+  <body>
+       	${1}
+  </body>
 snippet head
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8"`Close()`>
-
-		<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-		${2}
-	</head>
+    <head>
+		${1}
+    </head>
 snippet title
 	<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>${2}
 snippet script
-	<script type="text/javascript" charset="utf-8">
+	<script type="text/javascript">
 		${1}
-	</script>${2}
+	</script>
 snippet scriptsrc
-	<script src="${1}.js" type="text/javascript" charset="utf-8"></script>${2}
+	<script type="text/javascript">
+		${1}
+	</script>
 snippet style
 	<style type="text/css" media="${1:screen}">
 		${2}
@@ -130,10 +129,14 @@ snippet base
 	<base href="${1}" target="${2}"`Close()`>
 snippet r
 	<br`Close()[1:]`>
-snippet div
-	<div id="${1:name}">
+snippet divi
+  <div id="${1:name}">
 		${2}
-	</div>
+  </div>
+snippet divc
+  <div class="${1:name}">
+		${2}
+  </div>
 # Embed QT Movie
 snippet movie
 	<object width="$2" height="$3" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
