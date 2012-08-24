@@ -1,6 +1,6 @@
 h2. snipmate.vim
 
-bq. snipmate.vim is simple plugin to provide snippets in Vim. To add custom snippets, simply check a file in the snippets/ folder and follow the pattern. Snippets for a particular language are all bundled in a single file. For example, all *ruby* snippets are inside *snippets/ruby.snippets*. *html.erb* snippets are an exception to this rule. They  will be found under the snippets/eruby/ folder
+bq. snipmate.vim is simple plugin to provide snippets in Vim. To add custom snippets, simply check a file in the snippets/ folder and follow the pattern. Snippets for a particular language are all bundled in a single file. For example, all *ruby* snippets are inside snippets/ruby.snippets. *html.erb* snippets are an exception to this rule. They  will be found under the snippets/eruby/ folder
 
 This fork was made to add more snippets, mainly for Ruby.
 
