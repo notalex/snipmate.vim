@@ -1,6 +1,4 @@
 # #!/usr/bin/env ruby
-snippet {
-    { ${1} }
 snippet #!
 	#!/usr/bin/env ruby
 
@@ -498,16 +496,8 @@ snippet keepd
 	end
 snippet sel
 	select { |${1}| ${2} }${3}
-snippet seld
-	select do |${1}|
-		${2}
-	end
 snippet rej
 	reject { |${1}| ${2} }${3}
-snippet rejd
-	reject do |${1}|
-		${2}
-	end
 
 # cucumber step definitions
 snippet G
@@ -534,3 +524,5 @@ snippet Tb
 	Then /^${1}$/ do |${2}|
 		${3}
 	end
+snippet }
+	{ |${1}| ${2} }
