@@ -268,4 +268,9 @@ fun! ShowAvailableSnips()
 	call complete(col, matches)
 	return ''
 endf
+
+fun! ToCamelCase(text)
+  return substitute(a:text, escape('^(\w)([^_]+)(_(.+)|)$', '+()|'), '\u\1\2\u\4', '')
+endf
+
 " vim:noet:sw=4:ts=4:ft=vim
