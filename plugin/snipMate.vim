@@ -270,7 +270,13 @@ fun! ShowAvailableSnips()
 endf
 
 fun! ToCamelCase(text)
-  return substitute(a:text, escape('^(\w)([^_]+)(_(.+)|)$', '+()|'), '\u\1\2\u\4', '')
+  let s:new_string = a:text
+
+  while strlen(matchstr(s:new_string, '_'))
+    let s:new_string = substitute(s:new_string, escape('^(\w)([^_]+)(_(.+)|)$', '+()|'), '\u\1\2\u\4', '')
+  endwhile
+
+  return s:new_string
 endf
 
 " vim:noet:sw=4:ts=4:ft=vim
