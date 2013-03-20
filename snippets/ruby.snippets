@@ -91,12 +91,9 @@ snippet cla class .. end
 		${2}
 	end
 snippet cla-
-	class ${1:`ToCamelCase(expand('%:t:r'))`} < DelegateClass(${2:ParentClass})
-		def initialize(${3:args})
-			super(${4:del_obj})
-
-			${5}
-		end
+	class ${1:`ToCamelCase(expand('%:t:r'))`} < ${2:ParentClass}
+		${3}
+	end
 snippet mod module .. end
 	module ${1:`ToCamelCase(expand('%:t:r'))`}
 		${2}
