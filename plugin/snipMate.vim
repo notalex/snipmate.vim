@@ -272,9 +272,13 @@ endf
 fun! ToCamelCase(text)
   let s:new_string = a:text
 
-  while strlen(matchstr(s:new_string, '_'))
-    let s:new_string = substitute(s:new_string, escape('^(\w)([^_]+)(_(.+)|)$', '+()|'), '\u\1\2\u\4', '')
-  endwhile
+  if !strlen(matchstr(s:new_string, '_'))
+	  let s:new_string = substitute(s:new_string, escape('^(\w)(.+)$', '+()'), '\u\1\2', '')
+  else
+	  while strlen(matchstr(s:new_string, '_'))
+		let s:new_string = substitute(s:new_string, escape('^(\w)([^_]+)(_(.+)|)$', '+()|'), '\u\1\2\u\4', '')
+	  endwhile
+  endif
 
   return s:new_string
 endf
